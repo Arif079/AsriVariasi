@@ -1,0 +1,28 @@
+Jurnal Master
+ function get_jurnal($start = 0, $end = 0) {
+        if ($start == 0 && $end == 0) {
+            $start = date('Y-m-01'); // First day of the current month
+            $end = date('Y-m-t'); // Last day of the current month
+        } elseif ($start != 0 && $end != 0) {
+            $start = date('Y-m-d', strtotime($start));
+            $end = date('Y-m-d', strtotime($end));
+        }
+    
+        $this->db->select("IF(bkk_log.bkkno IS NOT NULL, bkk_log.bkkno, IF(bkm_log.bkmno IS NOT NULL, bkm_log.bkmno, j1.kdtransaksi)) AS kdtransaksi,j1.date,coa.nama,j1.coa, j1.debet, j1.kredit, j2.coa coalawan, j2.debet AS lawandebet, j2.kredit AS lawankredit");
+        $this->db->from("jurnalumum AS j1");
+        $this->db->join("jurnalumum AS j2", "j1.kdtransaksi = j2.kdtransaksi AND j1.coa!= j2.coa", "left");
+        $this->db->join("coa", "j1.coa = coa.coa", "left");
+        $this->db->join("bkk_log", "j1.kdtransaksi = bkk_log.referensibkk", "left");
+        $this->db->join("bkm_log", "j1.kdtransaksi = bkm_log.referensibkm", "left");
+    
+        if ($start && $end) {
+            $this->db->where("DATE(j1.date) >=", $start);
+            $this->db->where("DATE(j1.date) <=", $end);
+        } else {
+            $this->db->where("MONTH(j1.date)", date("m"));
+            $this->db->where("YEAR(j1.date)", date("Y"));
+        }
+    
+        return $this->db->get();
+    }
+    

@@ -1,0 +1,647 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Class DataTables\\\\Database\\\\Driver\\\\Db2Result constructor invoked with 3 parameters, 2 required\\.$#"
+			count: 1
+			path: Database/Driver/Db2Query.php
+
+		-
+			message: "#^Method DataTables\\\\Database\\\\Driver\\\\Db2Query\\:\\:connect\\(\\) should return PDO but returns resource\\.$#"
+			count: 1
+			path: Database/Driver/Db2Query.php
+
+		-
+			message: "#^Parameter \\#1 \\$connection of function db2_prepare expects resource, PDO given\\.$#"
+			count: 1
+			path: Database/Driver/Db2Query.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\Db2Query\\:\\:\\$_editor_pkey_value is never written, only read\\.$#"
+			count: 1
+			path: Database/Driver/Db2Query.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\Db2Result\\:\\:\\$_allRows is unused\\.$#"
+			count: 1
+			path: Database/Driver/Db2Result.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with non\\-empty\\-array\\<string\\> will always evaluate to true\\.$#"
+			count: 1
+			path: Database/Driver/FirebirdQuery.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\FirebirdResult\\:\\:\\$_dbh is never read, only written\\.$#"
+			count: 1
+			path: Database/Driver/FirebirdResult.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with non\\-empty\\-array\\<string\\> will always evaluate to true\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Method DataTables\\\\Database\\\\Driver\\\\OracleQuery\\:\\:connect\\(\\) should return PDO but returns resource\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Parameter \\#1 \\$connection of function oci_commit expects resource, PDO given\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Parameter \\#1 \\$connection of function oci_parse expects resource, PDO given\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Parameter \\#1 \\$connection of function oci_rollback expects resource, PDO given\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\OracleQuery\\:\\:\\$_editor_pkey_value is never written, only read\\.$#"
+			count: 1
+			path: Database/Driver/OracleQuery.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\OracleResult\\:\\:\\$_dbh is never read, only written\\.$#"
+			count: 1
+			path: Database/Driver/OracleResult.php
+
+		-
+			message: "#^Property DataTables\\\\Database\\\\Driver\\\\PostgresResult\\:\\:\\$_dbh is never read, only written\\.$#"
+			count: 1
+			path: Database/Driver/PostgresResult.php
+
+		-
+			message: "#^Method DataTables\\\\Database\\\\Query\\:\\:_where_group\\(\\) should return string but return statement is missing\\.$#"
+			count: 1
+			path: Database/Query.php
+
+		-
+			message: "#^Method DataTables\\\\Database\\\\Query\\:\\:connect\\(\\) should return PDO but return statement is missing\\.$#"
+			count: 1
+			path: Database/Query.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: Database/Query.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<string\\>\\|\\(Closure\\(\\$this\\)\\: void\\)\\|string and null will always evaluate to false\\.$#"
+			count: 2
+			path: Database/Query.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<string\\>\\|string and null will always evaluate to false\\.$#"
+			count: 4
+			path: Database/Query.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\|string and null will always evaluate to false\\.$#"
+			count: 1
+			path: Database/Query.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with DataTables\\\\Editor\\\\Field will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with DataTables\\\\Editor\\\\Join will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^If condition is always true\\.$#"
+			count: 3
+			path: Editor.php
+
+		-
+			message: "#^Left side of && is always true\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\:\\:_find_field\\(\\) should return DataTables\\\\Editor\\\\Field but returns null\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\:\\:_insert_or_update\\(\\) should return DataTables\\\\Database\\\\Result but returns int\\|string\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\:\\:_insert_or_update_table\\(\\) should return DataTables\\\\Database\\\\Result but returns null\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 8
+			path: Editor.php
+
+		-
+			message: "#^Parameter \\#1 \\$id of method DataTables\\\\Editor\\:\\:_insert_or_update\\(\\) expects int\\|string, null given\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Parameter \\#1 \\$pkeyVal of method DataTables\\\\Editor\\:\\:_pkey_submit_merge\\(\\) expects string, DataTables\\\\Database\\\\Result given\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Parameter \\#1 \\$set of method DataTables\\\\Database\\:\\:debug\\(\\) expects bool\\|null, Closure given\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Parameter \\#2 \\$parentId of method DataTables\\\\Editor\\\\Join\\:\\:create\\(\\) expects int, string given\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Parameter \\#3 \\$pkey of method DataTables\\\\Editor\\:\\:_remove_table\\(\\) expects string\\|null, array\\<int, mixed\\> given\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\:\\:\\$_db is never written, only read\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\:\\:\\$_formData is never read, only written\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 2
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between DataTables\\\\Database\\\\Result and null will always evaluate to true\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between array and null will always evaluate to true\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between int\\|string and null will always evaluate to true\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between string and null will always evaluate to true\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between \\(callable\\(\\)\\: mixed\\)\\|string and null will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between DataTables\\\\Database\\\\Result and null will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int\\|string and null will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 1
+			path: Editor.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Field\\:\\:xssSafety\\(\\) should return string but returns array\\<int, mixed\\>\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Field\\:\\:\\$_getFormatter is never written, only read\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Field\\:\\:\\$_getValue is never written, only read\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Field\\:\\:\\$_setFormatter is never written, only read\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Field\\:\\:\\$_setValue is never written, only read\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Field\\:\\:\\$_upload is never written, only read\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between \\(callable\\(mixed\\)\\: string\\)\\|false and true will always evaluate to false\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between callable\\(mixed\\)\\: string and null will always evaluate to false\\.$#"
+			count: 1
+			path: Editor/Field.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 2
+			path: Editor/Field.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:dateFormatToSql\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:dateSqlToFormat\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:datetime\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:explode\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:fromDecimalChar\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:ifEmpty\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:implode\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Format\\:\\:toDecimalChar\\(\\) should return string but returns Closure\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Static method DataTables\\\\Editor\\\\Format\\:\\:nullEmpty\\(\\) invoked with 1 parameter, 0 required\\.$#"
+			count: 1
+			path: Editor/Format.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with DataTables\\\\Editor\\\\Field will always evaluate to false\\.$#"
+			count: 2
+			path: Editor/Join.php
+
+		-
+			message: "#^If condition is always true\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Offset 'DT_RowId' does not exist on string\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#1 \\$order of method DataTables\\\\Database\\\\Query\\:\\:order\\(\\) expects array\\<string\\>\\|string, DataTables\\\\Editor\\\\Join given\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#2 \\$data of method DataTables\\\\Ext\\:\\:_propExists\\(\\) expects array, string given\\.$#"
+			count: 2
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#2 \\$data of method DataTables\\\\Ext\\:\\:_readProp\\(\\) expects array, string given\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#2 \\$val of method DataTables\\\\Database\\\\Query\\:\\:set\\(\\) expects string\\|null, int given\\.$#"
+			count: 2
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#3 \\$data of method DataTables\\\\Editor\\\\Join\\:\\:_update_row\\(\\) expects array\\<string\\>, string given\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Parameter \\#3 \\$data of method DataTables\\\\Editor\\\\Join\\:\\:_validateFields\\(\\) expects array\\<string\\>, string given\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Join\\:\\:\\$_customOrder is never written, only read\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Join\\:\\:\\$_table is never written, only read\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Join\\:\\:\\$_type is never written, only read\\.$#"
+			count: 1
+			path: Editor/Join.php
+
+		-
+			message: "#^Variable \\$readField might not be defined\\.$#"
+			count: 2
+			path: Editor/Join.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_limit is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_order is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_renderer is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_table is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_value is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\Options\\:\\:\\$_where is never written, only read\\.$#"
+			count: 1
+			path: Editor/Options.php
+
+		-
+			message: "#^Cannot call method where\\(\\) on string\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:_get_where\\(\\) is unused\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:\\$_order is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:\\$_renderer is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:\\$_table is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:\\$_value is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchBuilderOptions\\:\\:\\$_where is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 'array' and 'array' will always evaluate to true\\.$#"
+			count: 1
+			path: Editor/SearchBuilderOptions.php
+
+		-
+			message: "#^Cannot call method where\\(\\) on string\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:_get_where\\(\\) is unused\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:\\$_order is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:\\$_renderer is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:\\$_table is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:\\$_value is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Property DataTables\\\\Editor\\\\SearchPaneOptions\\:\\:\\$_where is never written, only read\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 'array' and 'array' will always evaluate to true\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: Editor/SearchPaneOptions.php
+
+		-
+			message: "#^Call to an undefined method DataTables\\\\Editor\\\\Upload\\:\\:_dbFormat\\(\\)\\.$#"
+			count: 1
+			path: Editor/Upload.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Upload\\:\\:_actionExec\\(\\) should return int but returns false\\.$#"
+			count: 1
+			path: Editor/Upload.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Upload\\:\\:data\\(\\) should return array but returns null\\.$#"
+			count: 1
+			path: Editor/Upload.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Upload\\:\\:exec\\(\\) should return int but returns false\\.$#"
+			count: 4
+			path: Editor/Upload.php
+
+		-
+			message: "#^Parameter \\#2 \\$replace of function str_replace expects array\\|string, int given\\.$#"
+			count: 1
+			path: Editor/Upload.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between int and null will always evaluate to true\\.$#"
+			count: 1
+			path: Editor/Upload.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:basic\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:boolean\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:dateFormat\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:dbValues\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:email\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:ip\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:maxLen\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:maxNum\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:minLen\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:minMaxLen\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:minMaxNum\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:minNum\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:noTags\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:numeric\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:required\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:unique\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:url\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:values\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+
+		-
+			message: "#^Method DataTables\\\\Editor\\\\Validate\\:\\:xss\\(\\) should return string\\|true but returns Closure\\(mixed, mixed, mixed, mixed\\)\\: mixed\\.$#"
+			count: 1
+			path: Editor/Validate.php
+

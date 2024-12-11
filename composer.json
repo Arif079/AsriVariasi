@@ -1,0 +1,16 @@
+{
+    "name": "cybe-dev/cy-bengkel",
+    "description": "Updated operational automotive service program",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Arif Wicaksono",
+            "email": "arifwicaksono0495@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^3.0",
+        "openspout/openspout": "^3.7",
+        "tecnickcom/tcpdf": "^6.7"
+    }
+}

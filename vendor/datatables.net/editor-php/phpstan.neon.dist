@@ -1,0 +1,23 @@
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+    - phpstan-baseline.neon
+
+parameters:
+    level: 6
+    paths:
+        - .
+    excludePaths:
+        - vendor
+
+    ignoreErrors:
+        -
+            message: '~^.+$~'
+            path: HtmLawed/HtmLawed.php
+
+        # TODO
+        - '~Property .+ has no type specified~'
+        - '~has parameter \$\w+ with no type specified~'
+        - '~has no return type specified~'
+        - '~return type has no value type specified~'
+        - '~no value type specified in iterable type array~'
+        - 'Call to function is_string() with non-falsy-string will always evaluate to true.'
